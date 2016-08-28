@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 颜色</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #F7F7F7;
+        }
+        .item {
+            width: 320px;
+            height: 320px;
+            margin: 100px auto;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+        /*在图片后面添加一个空元素,因为图片脱离标准流，不占位置*/
+        .item:hover:after {
+            content: '';
+            /*:after是行内元素，要设置为快级元素*/
+            display: block;
+            left:0;
+            top:0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+        }
+      
+    </style>
+</head>
+<body>
+<div class="item">
+    <img src="./images/pic.jpg" alt="">
+</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            margin:0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        .box   {
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            margin:100px auto;
+            position: relative;
+            transform: rotateY(30deg) rotateX(-30deg);
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        .box:hover {
+            rotateY(90deg)
+        }
+        .front,.back,.left,.right,.top,.bottom {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top:0;
+            left:0;
+            opacity: 0.4;
+        }
+        .front {
+            background-color: pink;
+            transform: translateZ(100px);
+        }
+        .back {
+            background-color: blue;
+            transform: translateZ(-100px);
+        }
+        .left {
+            background-color: green;
+            transform: rotateY(90deg) translateZ(-100px);
+        }
+        .right {
+            background-color: yellow;
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        .top {
+            background-color: red;
+            transform: rotateX(90deg) translateZ(100px) ;
+        }
+        .bottom {
+            background-color: orange;
+            transform: rotateX(90deg) translateZ(-100px);
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="front">fornt</div>
+    <div class="back">back</div>
+    <div class="left">left</div>
+    <div class="right">right</div>
+    <div class="top">top</div>
+    <div class="bottom">bottom</div>
+</div>
+</body>
+</html>

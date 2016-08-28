@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 2D转换</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        section {
+            height: 100%;
+            background-color: #DE8910;
+            position: relative;
+        }
+
+        .rocket {
+            width: 100px;
+            height: 190px;
+            position: absolute;
+            bottom: 0;
+            /*所有的延时2s*/
+            transition: all 2s;
+            /*过渡：先让火箭x轴不变化，y轴向下移动100%，隐藏，旋转60度 */
+            transform:translate(0,100%)  rotate(60deg);
+        }
+        /*鼠标放到section上的时候，火箭角度变为60度，位置向上移动800px*/
+        section:hover .rocket {
+            transform:rotate(60deg) translate(0,-800px);
+        }
+
+
+    </style>
+</head>
+<body>
+<section>
+    <div class="rocket">
+        <img src="rocket.png" alt="">
+    </div>
+</section>
+</body>
+</html>

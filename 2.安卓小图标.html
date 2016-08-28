@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .android {
+            width: 600px;
+            height: 500px;
+            background-color: skyblue;
+            margin: 100px auto 0;
+        }
+        header {
+            width: 200px;
+            height:100px;
+            margin:0 auto;
+            background-color: yellowgreen;
+            -webkit-border-top-left-radius: 100px;
+            -webkit-border-top-right-radius: 100px;
+            position: relative;
+        }
+        /*利用伪元素进行制作眼镜*/
+        header::before,header::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border-radius: 10px;
+            bottom: 40px;
+        }
+        header::before {
+            left: 50px;
+        }
+        header::after {
+            right: 50px;
+        }
+        .main {
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+            margin: 10px auto;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            position: relative;
+        }
+        .main::after,.main::before {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 100px;
+            background-color: yellowgreen;
+            bottom: -50px;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+        }
+        .main::after {
+            left:30px;
+        }
+        .main::before {
+            right:30px;
+        }
+        footer {
+            width: 350px;
+            height: 200px;
+            position: absolute;
+            left: 50%;
+            margin-left: -175px;
+            top:210px;
+        }
+        footer::after,footer::before {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 100px;
+            background-color: yellowgreen;
+            border-radius: 25px;
+        }
+        footer::after {
+            right: 0;
+        }
+        footer::before {
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="android">
+<!--头header-->
+<header></header>
+<!--身体-->
+<div class="main"></div>
+<!--手-->
+<footer></footer>
+</div>
+</body>
+</html>

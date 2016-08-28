@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            margin: 100px auto;
+            transition: all 3s;
+        }
+        .box:hover {
+            transform:perspective(200px) rotateX(-180deg);/*逆时针，往外(对着用户)翻转*/
+            transform:perspective(200px) rotateX(180deg);/*顺时针，往里面翻*/
+            transform:perspective(200px) rotatey(-180deg);/*逆时针，往里面翻*/
+            transform:perspective(200px) rotatey(180deg);/*顺时针，往里面翻*/
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+</body>
+</html>
